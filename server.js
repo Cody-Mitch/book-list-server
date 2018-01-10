@@ -26,7 +26,7 @@ app.get('/api/v1/books', (req, res) => {
 
 app.get('/api/v1/books/:id', (req, res) => {
     client.query(`
-        SELECT * FROM books WHERE id=${req.params.id};
+        SELECT * FROM books WHERE book_id=${req.params.id};
     `).then(result => res.send(result.rows[0]))
         .catch(err => console.error(err))
 
