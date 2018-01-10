@@ -24,6 +24,14 @@ app.get('/api/v1/books', (req, res) => {
         .catch(err => console.error(err))
 } )
 
+app.get('/api/v1/books/:id', (req, res) => {
+    client.query(`
+        SELECT * FROM books WHERE id=${req.params.id};
+    `).then(result => res.send(result.rows[0]))
+        .catch(err => console.error(err))
+
+})
+
 
 
 app.get('/test', (req, res) => res.send('hello world'))
