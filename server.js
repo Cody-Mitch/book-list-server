@@ -33,7 +33,7 @@ app.get('/api/v1/books/:id', (req, res) => {
 })
 
 app.post('/api/v1/books', express.json(), express.urlencoded({extended:true}), (req, res) => {
-    
+
     client.query(`
         INSERT INTO books
             (title, author, image_url, isbn, description)
