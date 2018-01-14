@@ -8,9 +8,9 @@ const app = express()
 
 const PORT = process.env.PORT || 3000
 //const conString = 'postgres://localhost:5432/kilovolt';
-//const DATABASE_URL = process.env.DATABASE_URL || 'postgres://localhost:5432/books_app'
+const DATABASE_URL = process.env.DATABASE_URL || 'postgres://localhost:5432/books_app'
 // const conString = 'postgres://localhost:5432/books_app';
-const DATABASE_URL = 'https://cg-mh-booklist.herokuapp.com'
+// const DATABASE_URL = 'https://cg-mh-booklist.herokuapp.com'
 const client = new pg.Client(DATABASE_URL)
 client.connect()
 //const __API_URL__ = https://cg-mh-booklist.herokuapp.com
